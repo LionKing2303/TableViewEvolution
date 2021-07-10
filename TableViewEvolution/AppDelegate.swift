@@ -19,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           // do nothing / do things that should only be done for iOS 13
         } else {
             self.window = UIWindow()
-            let vc = ViewController()
-            self.window!.rootViewController = vc
-            self.window!.makeKeyAndVisible()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
+
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
         }
         
         return true
