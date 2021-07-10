@@ -10,24 +10,23 @@ import XCTest
 
 class TableViewEvolutionTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testAddNewLineToConversation() {
+        let conversation = Conversation(lines: [])
+        let newLine = ConversationLine(message: "This is a new line", timeStamp: Date(), author: .me)
+        conversation.add(line: newLine)
+        XCTAssertEqual(conversation.lines.count, 1)
+        XCTAssertEqual(conversation.lines.first?.message, "This is a new line")
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testAddNewLineToViewModel() {
+        let line = ConversationLine(message: "This is a new message", timeStamp: Date(), author: .me)
+        let expectedConversation = Conversation(lines: [line])
+        
+        let conversation = Conversation(lines: [])
+        let viewModel = ViewController.ViewModel(conversation: conversation)
+        viewModel.add(message: "This is a new message", author: .me)
+        XCTAssertEqual(viewModel.conversation.lines.first?.message, expectedConversation.lines.first?.message)
+        XCTAssertEqual(viewModel.conversation.lines.first?.author, expectedConversation.lines.first?.author)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
 }

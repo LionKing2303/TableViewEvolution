@@ -9,9 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private var viewModel: ViewModel = .init(conversation: Conversation(lines: []))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 

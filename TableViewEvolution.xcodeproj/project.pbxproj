@@ -15,6 +15,8 @@
 		ACAD18AD269A12BD00568380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAD18AB269A12BD00568380 /* LaunchScreen.storyboard */; };
 		ACAD18B8269A12BD00568380 /* TableViewEvolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD18B7269A12BD00568380 /* TableViewEvolutionTests.swift */; };
 		ACAD18C3269A12BD00568380 /* TableViewEvolutionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD18C2269A12BD00568380 /* TableViewEvolutionUITests.swift */; };
+		ACBAB591269A1B0D003F8CF3 /* ConversationLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBAB590269A1B0D003F8CF3 /* ConversationLineModel.swift */; };
+		ACBAB599269A1D8A003F8CF3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBAB598269A1D8A003F8CF3 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		ACAD18BE269A12BD00568380 /* TableViewEvolutionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewEvolutionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD18C2269A12BD00568380 /* TableViewEvolutionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewEvolutionUITests.swift; sourceTree = "<group>"; };
 		ACAD18C4269A12BD00568380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACBAB590269A1B0D003F8CF3 /* ConversationLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationLineModel.swift; sourceTree = "<group>"; };
+		ACBAB598269A1D8A003F8CF3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				ACAD18A0269A12B800568380 /* AppDelegate.swift */,
 				ACAD18A2269A12B800568380 /* SceneDelegate.swift */,
 				ACAD18A4269A12B800568380 /* ViewController.swift */,
+				ACBAB590269A1B0D003F8CF3 /* ConversationLineModel.swift */,
+				ACBAB598269A1D8A003F8CF3 /* ViewModel.swift */,
 				ACAD18A6269A12B800568380 /* Main.storyboard */,
 				ACAD18A9269A12BD00568380 /* Assets.xcassets */,
 				ACAD18AB269A12BD00568380 /* LaunchScreen.storyboard */,
@@ -258,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACBAB599269A1D8A003F8CF3 /* ViewModel.swift in Sources */,
 				ACAD18A5269A12B800568380 /* ViewController.swift in Sources */,
 				ACAD18A1269A12B800568380 /* AppDelegate.swift in Sources */,
+				ACBAB591269A1B0D003F8CF3 /* ConversationLineModel.swift in Sources */,
 				ACAD18A3269A12B800568380 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJSUL68A86;
 				INFOPLIST_FILE = TableViewEvolution/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arieperetz.TableViewEvolution;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJSUL68A86;
 				INFOPLIST_FILE = TableViewEvolution/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arieperetz.TableViewEvolution;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -477,7 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJSUL68A86;
 				INFOPLIST_FILE = TableViewEvolutionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,7 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJSUL68A86;
 				INFOPLIST_FILE = TableViewEvolutionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
