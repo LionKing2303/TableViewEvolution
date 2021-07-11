@@ -13,20 +13,15 @@ enum Author {
 }
 
 struct ConversationLine: Hashable {
-    let id = UUID()
+    let id: UUID
     let message: String
     let timeStamp: Date
     let author: Author
-}
-
-final class Conversation {
-    private(set) var lines: [ConversationLine] = []
     
-    init(lines: [ConversationLine]) {
-        self.lines = lines
-    }
-    
-    func add(line: ConversationLine) {
-        lines.append(line)
+    internal init(id: UUID = UUID(), message: String, timeStamp: Date, author: Author) {
+        self.id = id
+        self.message = message
+        self.timeStamp = timeStamp
+        self.author = author
     }
 }

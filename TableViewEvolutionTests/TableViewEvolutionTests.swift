@@ -10,23 +10,14 @@ import XCTest
 
 class TableViewEvolutionTests: XCTestCase {
 
-    func testAddNewLineToConversation() {
-        let conversation = Conversation(lines: [])
-        let newLine = ConversationLine(message: "This is a new line", timeStamp: Date(), author: .me)
-        conversation.add(line: newLine)
-        XCTAssertEqual(conversation.lines.count, 1)
-        XCTAssertEqual(conversation.lines.first?.message, "This is a new line")
-    }
-
     func testAddNewLineToViewModel() {
-        let line = ConversationLine(message: "This is a new message", timeStamp: Date(), author: .me)
-        let expectedConversation = Conversation(lines: [line])
-        
-        let conversation = Conversation(lines: [])
-        let viewModel = ViewController.ViewModel(conversation: conversation)
-        viewModel.add(message: "This is a new message", author: .me)
-        XCTAssertEqual(viewModel.conversation.lines.first?.message, expectedConversation.lines.first?.message)
-        XCTAssertEqual(viewModel.conversation.lines.first?.author, expectedConversation.lines.first?.author)
+        let message = "This is a new message"
+        let line = ConversationLine(message: message, timeStamp: Date(), author: .me)
+        let viewModel = ViewController.ViewModel(lines: [])
+        viewModel.add(message: message, author: .me)
+        XCTAssertEqual(viewModel.lines.count, 1)
+        XCTAssertEqual(viewModel.lines.first?.message, line.message)
+        XCTAssertEqual(viewModel.lines.first?.author, line.author)
     }
     
 }

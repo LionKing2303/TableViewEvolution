@@ -9,7 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private var viewModel: ViewModel = .init(conversation: Conversation(lines: []))
+    private var viewModel: ViewModel?
+    
+    func set(with viewModel: ViewModel) {
+        self.viewModel = viewModel
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
